@@ -56,10 +56,10 @@ let addTimeLine = function () {
     sessionsTimeLinesTable.addColumn({type: 'date', id: 'Start'});
     sessionsTimeLinesTable.addColumn({type: 'date', id: 'End'});
 
-    sessionsTimeLinesTable.addRow(['Session', 'Session 1', new Date(1444, 10, 11), new Date(data.sessions[0].startDate)]);
+    sessionsTimeLinesTable.addRow(['Session', 'Session 0', new Date(1444, 10, 11), new Date(data.sessions[0].startDate)]);
 
     for (let i = 1; i < data.sessions.length; i++) {
-        sessionsTimeLinesTable.addRow(['Session', 'Session ' + (i + 1), new Date(data.sessions[i - 1].startDate), new Date(data.sessions[i].startDate)]);
+        sessionsTimeLinesTable.addRow(['Session', 'Session ' + (i), new Date(data.sessions[i - 1].startDate), new Date(data.sessions[i].startDate)]);
     }
 
     let options = {
@@ -80,10 +80,10 @@ let addTotalDev = function () {
     totalDevTable.addColumn('number', 'Développement total');
     totalDevTable.addColumn({type: 'string', role: 'annotation'});
 
-    totalDevTable.addRow(['Session 1', data.sessions[0].totalDev, data.sessions[0].totalDev.toString()]);
+    totalDevTable.addRow(['Session 0', data.sessions[0].totalDev, data.sessions[0].totalDev.toString()]);
 
     for (let i = 1; i < data.sessions.length; i++) {
-        totalDevTable.addRow(['Session ' + (i + 1), data.sessions[i].totalDev, data.sessions[i].totalDev + ' (' + (data.sessions[i].totalDevEvol > 0 ? '+' : '-') + data.sessions[i].totalDevEvol + '%' + ')']);
+        totalDevTable.addRow(['Session ' + (i), data.sessions[i].totalDev, data.sessions[i].totalDev + ' (' + (data.sessions[i].totalDevEvol > 0 ? '+' : '-') + data.sessions[i].totalDevEvol + '%' + ')']);
     }
 
     totalDevChart.draw(totalDevTable, generalOptions);
@@ -98,10 +98,10 @@ let addTotalLosses = function () {
     totalLossesTable.addColumn('number', 'Pertes total');
     totalLossesTable.addColumn({type: 'string', role: 'annotation'});
 
-    totalLossesTable.addRow(['Session 1', data.sessions[0].totalLosses, data.sessions[0].totalLosses.toString()]);
+    totalLossesTable.addRow(['Session 0', data.sessions[0].totalLosses, data.sessions[0].totalLosses.toString()]);
 
     for (let i = 1; i < data.sessions.length; i++) {
-        totalLossesTable.addRow(['Session ' + (i + 1), data.sessions[i].totalLosses, data.sessions[i].totalLosses + ' (' + (data.sessions[i].totalLossesEvol > 0 ? '+' : '-') + data.sessions[i].totalLossesEvol + '%' + ')']);
+        totalLossesTable.addRow(['Session ' + (i), data.sessions[i].totalLosses, data.sessions[i].totalLosses + ' (' + (data.sessions[i].totalLossesEvol > 0 ? '+' : '-') + data.sessions[i].totalLossesEvol + '%' + ')']);
     }
 
     totalLossesChart.draw(totalLossesTable, generalOptions);
