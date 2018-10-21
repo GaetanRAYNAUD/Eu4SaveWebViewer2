@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kebab finally gets removed !</title>
+    <link rel="icon" type="image/png" href="./images/EU4_icon.png"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://developers.google.com/_static/53e70b089a/css/devsite-google-blue.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire Swash" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
+    <script type="text/javascript" src="scripts/util.js"></script>
+    <script type="text/javascript" src="scripts/player.js"></script>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a class="active" href="./index.html">Acceuil</a></li>
+      <li><a href="./general.html">Général</a></li>
+      <li><a href="./session.html">Sessions</a></li>
+      <li><a href="./player.html">Joueurs</a></li>
+      <li><a href="./compare.html">Comparateur</a></li>
+
+      <select class="sessionSelect playerSelect active" onchange="changePlayer(this.value)" id="listPlayers">
+      </select>
+    </ul>
+
+    <div class="title" id="title">Kebab finally gets removed !</div>
+
+    <hr>
+
+    <div class="countryPlate countryPlatePlayer" id="countryPlate">
+      <div class="heading">
+        <div>
+          <img alt="Rank"
+               id="rank"
+               src="./images/government_ranks/2.png"
+               width="36"
+               height="36">
+          <span id="pseudo"></span>
+        </div>
+      </div>
+
+      <img alt="Flag.png" src="./images/flags/KOJ.png" class="flag" id="flag">
+
+      <hr>
+
+      <b>Culture</b>
+      <div class="info">
+        <span class="infoText textImage" id="culture"></span>
+        <img alt="Government monarchy.png"
+             src="./images/info/Culture.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Capitale</b>
+      <div class="info">
+        <span class="infoText textImage" id="capital"></span>
+        <img alt="Government monarchy.png"
+             src="./images/info/Capital.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Gouvernement</b>
+      <div class="info">
+        <span class="infoText textImage" id="government"></span>
+        <img alt="Government monarchy.png"
+             src="./images/info/Government_monarchy.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Religion</b>
+      <div class="info">
+        <span class="infoText textImage" id="religion"></span>
+        <img alt="Orthodox.png"
+             id="religionImg"
+             src="./images/religions/Orthodoxe.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Développement</b>
+      <div class="info">
+        <span class="infoText textImage" id="dev"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Dev.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Revenu</b>
+      <div class="info">
+        <span class="infoText textImage" id="income"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Gold.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Réserves militaire</b>
+      <div class="info">
+        <span class="infoText textImage" id="manpower"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Manpower.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Limite terrestre</b>
+      <div class="info">
+        <span class="infoText textImage" id="forceLimit"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Land_forcelimit.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Nombre de provinces</b>
+      <div class="info">
+        <span class="infoText textImage" id="nbProv"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Province.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Pertes</b>
+      <div class="info">
+        <span class="infoText textImage" id="losses"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Losses.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Emprun</b>
+      <div class="info">
+        <span class="infoText textImage" id="loan"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Loan.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Professionnalisme</b>
+      <div class="info">
+        <span class="infoText textImage" id="professionalism"></span>
+        <img alt="Orthodox.png"
+             src="./images/info/Professionalism.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Innovation</b>
+      <div class="info">
+        <span class="infoText textImage" id="innovativeness"></span>
+        <img alt="Innovativeness.png"
+             src="./images/info/Innovativeness.png"
+             width="36"
+             height="36">
+      </div>
+
+      <hr>
+
+      <b>Institutions</b>
+      <div class="info">
+        <img alt="Institutions.png"
+             id="feudalism"
+             class="institutionNotEmbraced"
+             src="./images/info/Feudalism.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="renaissance"
+             class="institutionNotEmbraced"
+             src="./images/info/Renaissance.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="colonialism"
+             class="institutionNotEmbraced"
+             src="./images/info/Colonialism.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="printingPress"
+             class="institutionNotEmbraced"
+             src="./images/info/Printing_Press.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="globalTrade"
+             class="institutionNotEmbraced"
+             src="./images/info/Global_Trade.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="manufactories"
+             class="institutionNotEmbraced"
+             src="./images/info/Manufactories.png"
+             width="36"
+             height="36">
+        <img alt="Institutions.png"
+             id="enlightenment"
+             class="institutionNotEmbraced"
+             src="./images/info/Enlightenment.png"
+             width="36"
+             height="36">
+      </div>
+    </div>
+
+    <div class="title tagsTimeLine">Pays joués</div>
+    <div id="tagsTimeLines" class="tagsTimeLine"></div>
+
+    <div id="dashboard-Stats" class="chart">
+      <div id="chart-Stats" class="chart-div statsTable"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Rank" class="chart">
+      <div class="title">Classement</div>
+      <div id="chart-Rank" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Dev" class="chart">
+      <div class="title">Développement</div>
+      <div id="chart-Dev" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Income" class="chart">
+      <div class="title">Revenu</div>
+      <div id="chart-Income" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Manpower" class="chart">
+      <div class="title">Réserves militaires</div>
+      <div id="chart-Manpower" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-ForceLimit" class="chart">
+      <div class="title">Limite terrestre</div>
+      <div id="chart-ForceLimit" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-NbProvinces" class="chart">
+      <div class="title">Nombre de provinces</div>
+      <div id="chart-NbProvinces" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Losses" class="chart">
+      <div class="title">Pertes</div>
+      <div id="chart-Losses" class="chart-div stat-chart"></div>
+    </div>
+
+    <hr>
+
+    <div id="dashboard-Professionalism" class="chart">
+      <div class="title">Professionnalisme</div>
+      <div id="chart-Professionalism" class="chart-div stat-chart"></div>
+    </div>
+
+  </body>
+</html>

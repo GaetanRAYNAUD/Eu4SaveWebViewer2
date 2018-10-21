@@ -1,0 +1,337 @@
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+.title {
+    padding-left: 2.5%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Berkshire Swash', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.chart-div {
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.control-div {
+    margin-bottom: 10px;
+}
+
+.stat-chart {
+    height: 80vh;
+}
+
+.tableHeader {
+    background-color: #78909c;
+    border-collapse: collapse;
+}
+
+.tableRow {
+    height: 30px;
+}
+
+.tableRow:hover {
+    font-weight: bold;
+}
+
+.tableCell {
+    vertical-align: middle;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+th.tableHeader.sort-descending > span, th.tableHeader.sort-ascending > span {
+    border: 0;
+}
+
+#chart-general {
+    height: 85%;
+}
+
+#chart-general > div > div > table {
+    margin-top: -1px;
+}
+
+img {
+    border: none;
+}
+
+.countryPlate a {
+    color: lightblue !important;
+}
+
+a {
+    text-decoration: none;
+    color: #0645ad;
+    background: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.countryPlate b {
+    color: lightblue !important;
+}
+
+.countryPlate .heading {
+    background: #20303B;
+    border-radius: 6px;
+    padding: 0 6px 0;
+    color: white !important;
+    font-size: 150%;
+    margin-bottom: 3px;
+    height: 40px;
+    position: relative;
+}
+
+.heading span {
+    position: relative;
+    top: -9px;
+}
+
+.countryPlate * {
+    list-style-image: none;
+}
+
+.countryPlate {
+    border: 2px solid #20303B;
+    border-radius: 6px;
+    background: #3c5a6e;
+    color: white !important;
+    padding: 5px;
+    width: 23%;
+    min-width: 384px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1.4%;
+    display: inline-block;
+    position: relative;
+}
+
+.flag {
+    width: 80%;
+    display: block;
+    margin: 10px auto auto;
+}
+
+.info {
+    float: right;
+}
+
+.textImage {
+    position: relative;
+    top: -18px;
+}
+
+.info img {
+    position: relative;
+    top: -5px;
+}
+
+.infoText {
+    color: green;
+    font-weight: bold;
+    background: #E9E9E9;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.deadCountry {
+    background: rgba(60, 90, 110, 0.3);
+    border: 2px solid rgba(32, 48, 59, 0.3);;
+}
+
+.deadCountry img {
+    opacity: 0.3;
+}
+
+.deadCountry .heading {
+    opacity: 0.3;
+}
+
+.deadCountryText {
+    position: absolute;
+    top: 600px;
+    width: 900px;
+    left: -220px;
+    font-size: 95px;
+    font-weight: bold;
+    color: red;
+    transform: rotate(65deg);
+    opacity: 1;
+    z-index: 10;
+}
+
+.sessionsTimeLines {
+    width: 95%;
+    padding-left: 2.5%;
+    font-weight: bold;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #20303B;
+}
+
+.navbar li {
+    float: left;
+    margin: 0;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: green;
+}
+
+.active {
+    background-color: #3c5a6e;
+}
+
+.sessionSelect {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: 16px/24px Roboto,sans-serif;
+    border: 0;
+    margin: 0;
+    height: 52px;
+    width: 120px;
+    background-color: #3c5a6e !important;
+}
+
+.sessionSelect:hover {
+    background-color: green !important;
+}
+
+.sessionSelect option {
+    background-color: #3c5a6e !important;
+}
+
+.general-chart {
+    height: 400px;
+}
+
+.institutionEmbraced {
+    display: inline-block;
+}
+
+.institutionNotEmbraced {
+    display: none;
+}
+
+.countryPlatePlayer {
+    float: right;
+    width: 330px;
+    margin-right: 10px;
+}
+
+.playerSelect {
+    min-width: 160px;
+    width: auto;
+}
+
+.tagsTimeLine {
+    margin-left: 2.5%;
+    margin-right: 430px;
+    font-weight: bold;
+}
+
+.countryPlateCompare {
+    border: 2px solid #20303B;
+    border-radius: 6px;
+    background: #3c5a6e;
+    color: white !important;
+    padding: 5px;
+    width: 23%;
+    min-width: 384px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1.4%;
+    display: inline-block;
+    position: relative;
+}
+
+.countryPlateCompare hr {
+    margin: 8px 0;
+}
+
+.countryPlateCompare .info {
+    height: 36px;
+}
+
+.countryPlateCompare b {
+    float: left;
+}
+
+.teamSelect {
+    display: block;
+    margin-left: 30px;
+}
+
+.result {
+    text-align: center;
+}
+
+.result .stat {
+    height: 36px;
+}
+
+.result .textImage {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.result .team1 {
+    float: left;
+    top: 0px;
+}
+
+.result .team2 {
+    float: right;
+    top: 0px;
+}
+
+.result .vs {
+    text-align: center;
+    right: -2%;
+}
+
+.result img {
+    position: absolute;
+    right: 45%;
+}
+
+.result .resultHeading {
+    top: 8px;
+}
+
+.result .countryPlateCompare {
+    width: 50%;
+}
+
+.compareLose {
+    color: red;
+}
