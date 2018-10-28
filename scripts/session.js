@@ -107,7 +107,7 @@ let init = function () {
     }
     );
 
-    drawSession(data.nbSessions - 1);
+    drawSession(data.nbSessions);
 };
 
 
@@ -135,7 +135,7 @@ let cleanTables = function () {
 };
 
 let fillListSessions = function () {
-    let i = 0;
+    let i = 1;
     let listSessions = document.getElementById("listSessions");
 
     data.sessions.forEach(() => {
@@ -154,8 +154,6 @@ let fillListSessions = function () {
 let drawSession = function (num) {
 
     cleanTables();
-
-    console.log(num);
 
     dataDev.addColumn('string', 'Joueur');
     dataDev.addColumn('number', 'Session ' + num);
@@ -178,12 +176,10 @@ let drawSession = function (num) {
     dataProfessionalism.addColumn('string', 'Joueur');
     dataProfessionalism.addColumn('number', 'Session ' + num);
 
-    if(num === 0 ) {
+    if(num === 1) {
         data.players.forEach((player) => {
             if (player.sessions.length >= num) {
-                let sessionStats = player.sessions[num];
-
-                console.log(player.sessions);
+                let sessionStats = player.sessions[num - 1];
 
                 dataGeneral.addRow([player.pseudo, sessionStats.dev, sessionStats.income, sessionStats.manpower, sessionStats.forceLimit, sessionStats.nbProv, sessionStats.losses, sessionStats.loan, sessionStats.professionalism]);
                 dataDev.addRow([player.pseudo, sessionStats.dev]);
@@ -199,25 +195,25 @@ let drawSession = function (num) {
 
     } else {
         dataDev.addColumn({type: 'string', role: 'annotation'});
-        dataDev.addColumn('number', 'Session ' + (num));
+        dataDev.addColumn('number', 'Session ' + (num - 1));
 
         dataIncome.addColumn({type: 'string', role: 'annotation'});
-        dataIncome.addColumn('number', 'Session ' + (num));
+        dataIncome.addColumn('number', 'Session ' + (num - 1));
 
         dataManpower.addColumn({type: 'string', role: 'annotation'});
-        dataManpower.addColumn('number', 'Session ' + (num));
+        dataManpower.addColumn('number', 'Session ' + (num - 1));
 
         dataForceLimit.addColumn({type: 'string', role: 'annotation'});
-        dataForceLimit.addColumn('number', 'Session ' + (num));
+        dataForceLimit.addColumn('number', 'Session ' + (num - 1));
 
         dataNbProvinces.addColumn({type: 'string', role: 'annotation'});
-        dataNbProvinces.addColumn('number', 'Session ' + (num));
+        dataNbProvinces.addColumn('number', 'Session ' + (num - 1));
 
         dataLosses.addColumn({type: 'string', role: 'annotation'});
-        dataLosses.addColumn('number', 'Session ' + (num ));
+        dataLosses.addColumn('number', 'Session ' + (num - 1 ));
 
         dataProfessionalism.addColumn({type: 'string', role: 'annotation'});
-        dataProfessionalism.addColumn('number', 'Session ' + (num));
+        dataProfessionalism.addColumn('number', 'Session ' + (num - 1));
 
         data.players.forEach((player) => {
             if (player.sessions.length >= num) {

@@ -207,21 +207,21 @@ let changePlayer = function (num) {
     let i = 0;
 
     data.players[num].sessions.forEach((session) => {
-        dataStats.addRow(['Session ' + (i), session.dev, session.income, session.manpower, session.forceLimit, session.nbProv, session.losses, session.loan, session.professionalism]);
-        dataRank.addRow(['Session ' + (i), session.devRank, session.devRank, session.incomeRank, session.incomeRank, session.manpowerRank, session.manpowerRank, session.forceLimitRank, session.forceLimitRank]);
-        dataDev.addRow(['Session ' + (i), session.dev,
+        dataStats.addRow(['Session ' + (i + 1), session.dev, session.income, session.manpower, session.forceLimit, session.nbProv, session.losses, session.loan, session.professionalism]);
+        dataRank.addRow(['Session ' + (i + 1), session.devRank, session.devRank, session.incomeRank, session.incomeRank, session.manpowerRank, session.manpowerRank, session.forceLimitRank, session.forceLimitRank]);
+        dataDev.addRow(['Session ' + (i + 1), session.dev,
             session.devEvol !== undefined ? (session.dev + ' (' + (session.devEvol >= 0 ? '+' : '') + session.devEvol + '%)') : session.dev.toString()]);
-        dataIncome.addRow(['Session ' + (i), session.income,
+        dataIncome.addRow(['Session ' + (i + 1), session.income,
             session.incomeEvol !== undefined ? (session.income + ' (' + (session.incomeEvol >= 0 ? '+' : '') + session.incomeEvol + '%)') : session.income.toString()]);
-        dataManpower.addRow(['Session ' + (i), session.manpower,
+        dataManpower.addRow(['Session ' + (i + 1), session.manpower,
             session.manpowerEvol !== undefined ? (session.manpower + ' (' + (session.manpowerEvol >= 0 ? '+' : '') + session.manpowerEvol + '%)') : session.manpower.toString()]);
-        dataForceLimit.addRow(['Session ' + (i), session.forceLimit,
+        dataForceLimit.addRow(['Session ' + (i + 1), session.forceLimit,
             session.forceLimitEvol !== undefined ? (session.forceLimit + ' (' + (session.forceLimitEvol >= 0 ? '+' : '') + session.forceLimitEvol + '%)') : session.forceLimit.toString()]);
-        dataNbProvinces.addRow(['Session ' + (i), session.nbProv,
+        dataNbProvinces.addRow(['Session ' + (i + 1), session.nbProv,
             session.nbProvEvol !== undefined ? (session.nbProv + ' (' + (session.nbProvEvol >= 0 ? '+' : '') + session.nbProvEvol + ')') : session.nbProv.toString()]);
-        dataLosses.addRow(['Session ' + (i), session.losses,
+        dataLosses.addRow(['Session ' + (i + 1), session.losses,
             session.lossesEvol !== undefined ? (session.losses + ' (' + (session.lossesEvol >= 0 ? '+' : '') + session.lossesEvol + '%)') : session.losses.toString()]);
-        dataProfessionalism.addRow(['Session ' + (i), session.professionalism,
+        dataProfessionalism.addRow(['Session ' + (i + 1), session.professionalism,
             session.professionalismEvol !== undefined ? (session.professionalism + ' (' + (session.professionalismEvol >= 0 ? '+' : '') + session.professionalismEvol + ')') : session.professionalism.toString()]);
         i++;
     });
