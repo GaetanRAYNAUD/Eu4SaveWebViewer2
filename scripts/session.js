@@ -176,7 +176,7 @@ let drawSession = function (num) {
     dataProfessionalism.addColumn('string', 'Joueur');
     dataProfessionalism.addColumn('number', 'Session ' + num);
 
-    if(num === 1) {
+    if(num === "1") {
         data.players.forEach((player) => {
             if (player.sessions.length >= num) {
                 let sessionStats = player.sessions[num - 1];
