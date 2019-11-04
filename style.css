@@ -2,6 +2,17 @@ body {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
+.pseudo {
+    top: 2px !important;
+}
+
+.mapImg {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .title {
     padding-left: 2.5%;
     margin-top: 30px;
@@ -10,12 +21,6 @@ body {
     font-family: 'Berkshire Swash', sans-serif;
     font-weight: bold;
     font-size: 40px;
-}
-
-.img-title {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .chart-div {
@@ -149,6 +154,15 @@ a:-webkit-any-link {
     background: #E9E9E9;
     padding: 4px;
     border-radius: 5px;
+}
+
+.infoTextIndex {
+    color: green;
+    font-weight: bold;
+    background: #E9E9E9;
+    padding: 4px;
+    border-radius: 5px;
+    top: -5px;
 }
 
 .deadCountry {
